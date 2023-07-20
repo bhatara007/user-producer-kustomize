@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: duke-user-producer-service
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: duke-user-producer-service
+          resources:
+            limits:
+              cpu: 200m
+              memory: 512Mi
+            requests:
+              cpu: 200m
+              memory: 512Mi

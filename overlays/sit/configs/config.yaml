@@ -1,0 +1,30 @@
+environment: local
+
+app:
+  name: duke-user-producer-service
+
+server:
+  port: 8080
+  timeout: 60
+
+log:
+  environment: production 
+  level: info
+  format: json
+
+kafka:
+  address: kafka.poc.internal:9092
+  topic: duke-users
+  consume-group: duke-hw3
+
+postgres:
+  host: 172.28.240.42
+  port: 5432
+  db-name: duke-db
+
+redis:
+  address: 172.28.241.3:6379
+  database: 1
+
+user-list-key: users
+

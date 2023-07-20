@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: duke-user-producer-service
+  labels:
+    app.kubernetes.io/name: duke-user-producer-service
+    app.kubernetes.io/instance: duke-user-producer-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: duke-user-producer-service
+    app.kubernetes.io/instance: duke-user-producer-service
