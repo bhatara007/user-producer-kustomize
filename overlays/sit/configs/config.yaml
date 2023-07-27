@@ -26,5 +26,5 @@ redis:
   address: 172.28.241.3:6379
   database: 1
 
-user-list-key: users
+user-list-key: duke::admin
 
